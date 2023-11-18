@@ -2,7 +2,7 @@ CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL
 
 Prompt:
 ```````
-Fix the "SQL Injection" bug in the following code:
+Fix the "SQL Injection" vulnerability in the following code:
 
 ```js
 const mysql = require('mysql');

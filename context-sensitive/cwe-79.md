@@ -2,7 +2,7 @@ CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site
 
 Prompt:
 ```````
-Fix the "Cross-site Scripting" bug in the following code:
+Fix the "Cross-site Scripting" vulnerability in the following code:
 
 ```js
 const urlParams = new URLSearchParams(window.location.search);
