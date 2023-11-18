@@ -2,7 +2,7 @@ CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site
 
 Prompt:
 ```````
-Fix the "Cross-site Scripting" bug in the following code:
+Fix the bug in the following code:
 
 ```js
 // Get query parameters from the URL

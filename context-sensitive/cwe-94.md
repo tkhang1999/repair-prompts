@@ -15,8 +15,6 @@ function main() {
   
   console.log(`Sum of ${numbers} = ${sum}`);
 }
-
-main();
 ```
 ```````
 
