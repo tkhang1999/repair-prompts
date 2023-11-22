@@ -9,7 +9,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const username = urlParams.get('username') || 'Guest'; 
 
 const outputDiv = document.getElementById('output');
-outputDiv.innerHTML = <div class="header"> Welcome, ${username} </div>;
+outputDiv.innerHTML = `<div class="header"> Welcome, ${username} </div>`;
 ```
 ```````
 

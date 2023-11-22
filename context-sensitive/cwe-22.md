@@ -10,8 +10,12 @@ const path = getInputPath();
 if (path.startsWith("/safe_dir/")) {
   const fs = require('fs');
   fs.unlink(path, (err) => {
-  console.log("Something went wrong!");
-});
+    if (err) {
+      console.error(`Error deleting file: ${err.message}`);
+    } else {
+      console.log("File deleted successfully.");
+    }
+  });
 }
 ```
 ```````

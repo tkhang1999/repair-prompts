@@ -13,7 +13,11 @@ if (path.startsWith("/safe_dir/")) {
   const fs = require('fs');
   // Delete the file
   fs.unlink(path, (err) => {
-    console.log("Something went wrong!");
+    if (err) {
+      console.error(`Error deleting file: ${err.message}`);
+    } else {
+      console.log("File deleted successfully.");
+    }
   });
 }
 

@@ -12,7 +12,7 @@ const username = urlParams.get('username') || 'Guest';
 
 // Display the welcome message in a div
 const outputDiv = document.getElementById('output');
-outputDiv.innerHTML = <div class="header"> Welcome, ${username} </div>;
+outputDiv.innerHTML = `<div class="header"> Welcome, ${username} </div>`;
 
 // An attacker may inject malicious scripts like http://trustedSite.example.com/welcome.html?username=<Script Language="Javascript">alert("You've been attacked!");</Script>
 ```
