@@ -19,6 +19,22 @@ outputDiv.innerHTML = `<div class="header"> Welcome, ${username} </div>`;
 ```````
 
 Output:
+```````
+ChatGPT:
+"""
+To fix the vulnerability and prevent the injection of malicious scripts, you should use the textContent property instead of innerHTML when setting the content of the outputDiv. Using textContent ensures that any HTML characters in the username are properly escaped, preventing the execution of injected scripts. Here's the corrected code:
+
+```js
+// Get query parameters from the URL
+const urlParams = new URLSearchParams(window.location.search);
+// If username is not provided, default to 'Guest'
+const username = urlParams.get('username') || 'Guest'; 
+
+// Display the welcome message in a div
+const outputDiv = document.getElementById('output');
+
+// Use textContent instead of innerHTML to prevent script injection
+outputDiv.textContent = `Welcome, ${username}`;
 ```
-TODO
-```
+"""
+```````
