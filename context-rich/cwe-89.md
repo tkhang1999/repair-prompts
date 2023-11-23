@@ -26,9 +26,9 @@ connection.end();
 ```````
 
 Output:
+
+- ChatGPT:
 ```````
-ChatGPT:
-"""
 The code you provided is vulnerable to SQL injection. To fix this vulnerability, you should use parameterized queries or prepared statements to properly handle user input. Here's an example of how you can modify the code to use parameterized queries with placeholders:
 
 ```js
@@ -62,5 +62,31 @@ connection.query(query, values, (error, results) => {
   connection.end();
 });
 ```
-"""
 ```````
+
+- Bard:
+``````
+The bug in the provided code lies in the construction of the SQL query. The itemName input is directly concatenated into the query without proper escaping, making it vulnerable to SQL injection attacks.
+
+To fix this bug, you should use parameterized queries instead of directly embedding user input into the query string. Parameterized queries allow you to separate the data from the query itself, preventing malicious input from altering the query's structure.
+
+Here's the corrected code using parameterized queries:
+
+```js
+// Establish a connection to the database
+const mysql = require('mysql');
+const connection = mysql.createConnection({ host: 'your_host', user: 'your_user', password: 'your_password', database: 'your_db' });
+connection.connect();
+
+// Get 'userName' and 'itemName' inputs
+const userName = ctx.getAuthenticatedUserName();
+const itemName = ItemName.Text;
+
+// Prepare the SQL query using parameterized values
+const query = "SELECT * FROM items WHERE owner = ? AND itemname = ?";
+
+// Execute the query using prepared statements
+connection.query(query, [userName, itemName], (error, results) => error ? console.error('Error:', error) : console.log('Results:', results));
+connection.end();
+```
+``````
