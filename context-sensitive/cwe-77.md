@@ -23,9 +23,9 @@ readFile(fileName);
 ```````
 
 Output:
+
+- ChatGPT:
 ```````
-ChatGPT:
-"""
 To fix the "Command Injection" vulnerability in the code, you should avoid directly interpolating user inputs into the command string. Instead, use appropriate methods to sanitize and validate the input. Here's an example using the spawn method and validating the input:
 
 ```js
@@ -63,5 +63,25 @@ function readFile(fileName) {
 const fileName = process.argv[2];
 readFile(fileName);
 ```
-"""
 ```````
+
+- Bard:
+``````
+To fix the command injection vulnerability in the provided code, you should avoid directly concatenating user-supplied data with the cat command. Instead, use a dedicated library like fs to read files safely. Here's the modified code:
+
+```js
+const fs = require('fs');
+
+function readFile(fileName) {
+  try {
+    const fileContent = fs.readFileSync(fileName, 'utf8');
+    console.log(fileContent);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+const fileName = process.argv[2];
+readFile(fileName);
+```
+``````

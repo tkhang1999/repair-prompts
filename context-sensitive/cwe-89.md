@@ -19,9 +19,9 @@ connection.end();
 ```````
 
 Output:
+
+- ChatGPT:
 ```````
-ChatGPT:
-"""
 To fix the "SQL Injection" vulnerability in the given code, you should use parameterized queries or prepared statements to safely handle user input. Here's an example of how you can modify the code to mitigate SQL injection:
 
 ```js
@@ -46,5 +46,29 @@ connection.query(query, values, (error, results) => {
   connection.end();
 });
 ```
-"""
 ```````
+
+- Bard:
+``````
+The main issue with the provided code is the direct concatenation of user-supplied data into the SQL query, making it vulnerable to SQL injection attacks. To fix this vulnerability, you should use parameterized queries with placeholders instead of direct string concatenation. Parameterized queries help prevent SQL injection by separating the data from the query structure.
+
+Here's the corrected code using parameterized queries:
+
+```js
+const mysql = require('mysql');
+const connection = mysql.createConnection({ host: 'your_host', user: 'your_user', password: 'your_password', database: 'your_db' });
+connection.connect();
+
+const userName = ctx.getAuthenticatedUserName();
+const itemName = ItemName.Text;
+
+connection.query(`SELECT * FROM items WHERE owner = ? AND itemname = ?`, [userName, itemName], (error, results) => {
+  if (error) {
+    console.error('Error:', error);
+  } else {
+    console.log('Results:', results);
+  }
+});
+connection.end();
+```
+``````
