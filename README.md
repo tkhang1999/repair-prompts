@@ -16,3 +16,204 @@ However, as not all vulnerabilities in this list are applicable to JavaScript, 2
 Based on the 3 proposed prompt templates and the identified 20 vulnerabilities, there is a total number of 60 prompts used in testing with LLMs, namely ChatGPT and Bard.
 
 The performance of these LLMs is as follows:
+
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th colspan=3>ChatGPT</th>
+            <th colspan=3>Bard</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td></td>
+          <td>context-free</td>
+          <td>content-sensitive</td>
+          <td>context-rich</td>
+          <td>context-free</td>
+          <td>content-sensitive</td>
+          <td>context-rich</td>
+        </tr>
+        <tr>
+          <td><b>CWE-20</b></td>
+          <td align="center">&cross;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+          <td align="center">&cross;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+        </tr>
+        <tr>
+          <td><b>CWE-22</b></td>
+          <td align="center">&cross;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+          <td align="center">&cross;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+        </tr>
+        <tr>
+          <td><b>CWE-77</b></td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+        </tr>
+        <tr>
+          <td><b>CWE-78</b></td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+          <td align="center">&cross;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+        </tr>
+        <tr>
+          <td><b>CWE-79</b></td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+        </tr>
+        <tr>
+          <td><b>CWE-89</b></td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+        </tr>
+        <tr>
+          <td><b>CWE-94</b></td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+        </tr>
+        <tr>
+          <td><b>CWE-125</b></td>
+          <td align="center">&cross;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+          <td align="center">&cross;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+        </tr>
+        <tr>
+          <td><b>CWE-190</b></td>
+          <td align="center">&cross;</td>
+          <td align="center">&cross;</td>
+          <td align="center">&check;</td>
+          <td align="center">&cross;</td>
+          <td align="center">&cross;</td>
+          <td align="center">&cross;</td>
+        </tr>
+        <tr>
+          <td><b>CWE-269</b></td>
+          <td align="center">&cross;</td>
+          <td align="center">&cross;</td>
+          <td align="center">&check;</td>
+          <td align="center">&cross;</td>
+          <td align="center">&cross;</td>
+          <td align="center">&cross;</td>
+        </tr>
+        <tr>
+          <td><b>CWE-276</b></td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+        </tr>
+        <tr>
+          <td><b>CWE-287</b></td>
+          <td align="center">&cross;</td>
+          <td align="center">&cross;</td>
+          <td align="center">&check;</td>
+          <td align="center">&cross;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+        </tr>
+        <tr>
+          <td><b>CWE-306</b></td>
+          <td align="center">&cross;</td>
+          <td align="center">&cross;</td>
+          <td align="center">&check;</td>
+          <td align="center">&cross;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+        </tr>
+        <tr>
+          <td><b>CWE-434</b></td>
+          <td align="center">&cross;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+          <td align="center">&cross;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+        </tr>
+        <tr>
+          <td><b>CWE-476</b></td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+          <td align="center">&cross;</td>
+          <td align="center">&cross;</td>
+        </tr>
+        <tr>
+          <td><b>CWE-502</b></td>
+          <td align="center">&cross;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+        </tr>
+        <tr>
+          <td><b>CWE-787</b></td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+        </tr>
+        <tr>
+          <td><b>CWE-798</b></td>
+          <td align="center">&cross;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+          <td align="center">&cross;</td>
+          <td align="center">&cross;</td>
+          <td align="center">&cross;</td>
+        </tr>
+        <tr>
+          <td><b>CWE-862</b></td>
+          <td align="center">&cross;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+          <td align="center">&cross;</td>
+          <td align="center">&cross;</td>
+          <td align="center">&check;</td>
+        </tr>
+        <tr>
+          <td><b>CWE-863</b></td>
+          <td align="center">&cross;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+          <td align="center">&cross;</td>
+          <td align="center">&check;</td>
+          <td align="center">&check;</td>
+        </tr>
+    </tbody>
+</table>
