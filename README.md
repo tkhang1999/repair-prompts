@@ -120,10 +120,10 @@ The performance of these LLMs is as follows:
           <td><b>CWE-269</b></td>
           <td align="center">&cross;</td>
           <td align="center">&cross;</td>
+          <td align="center">&cross;</td>
+          <td align="center">&cross;</td>
           <td align="center">&check;</td>
-          <td align="center">&cross;</td>
-          <td align="center">&cross;</td>
-          <td align="center">&cross;</td>
+          <td align="center">&check;</td>
         </tr>
         <tr>
           <td><b>CWE-276</b></td>
