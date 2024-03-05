@@ -1,4 +1,6 @@
 # repair-prompts
+[![DOI](https://zenodo.org/badge/720187426.svg)](https://zenodo.org/doi/10.5281/zenodo.10783762)
+
 Various repair prompts for finding and fixing security vulnerabilities in JavaScript programs using Large Language Models (LLMs).
 
 ## Prompt Design
