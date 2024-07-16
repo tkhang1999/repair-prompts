@@ -219,3 +219,15 @@ The performance of these LLMs is as follows:
         </tr>
     </tbody>
 </table>
+
+## Citation
+If you find this repository helpful, feel free to cite our publication [A Study of Vulnerability Repair in JavaScript Programs with Large Language Models](https://doi.org/10.1145/3589335.3651463):
+```
+@inproceedings{le2024study,
+  title={A Study of Vulnerability Repair in JavaScript Programs with Large Language Models},
+  author={Le, Tan Khang and Alimadadi, Saba and Ko, Steven Y},
+  booktitle={Companion Proceedings of the ACM on Web Conference 2024},
+  pages={666--669},
+  year={2024}
+}
+```
